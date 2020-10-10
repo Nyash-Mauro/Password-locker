@@ -36,3 +36,13 @@ class TestUser(unittest.TestCase):
         """
         self.new_user.save_user() #to save new user
         self.assertEqual(len(User.user_list),1)
+
+    def test_save_multiple_user(self):
+        """
+        to check if we can save multiple user credentials to our user_list
+        """
+        self.new_user.save_user()
+        test_user = User("Tiktok",
+        "HarryMee","254juice")
+        test_user.save_user()
+        self.assertEqual(len(User.user_list),2)
