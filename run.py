@@ -60,7 +60,7 @@ def main():
         print("")
         print("-" * 60)
         print(
-            "Use thes codes to navigate:\n ca-Create an Account \n li-Log In \n ex-Exit"
+            "Use these codes to navigate:\n ca-Create an Account \n li-Log In \n ex-Exit"
         )
         short_code = input("Enter Your Choice:").lower().strip()
         if short_code == "ex":
@@ -79,7 +79,16 @@ def main():
             print(
                 f"New account Created for :{account} {username}using passcode:{password}"
             )
+        # elif short_code == "li":
+        #     print("-" * 60)
+        #     print("")
+        #     print("To login,enter your user details :")
+        #     account = input("Enter your acount account -")
+        #     password = str(input("Enter your assword"))
+        #     user_exists = (username(str), password)
+        #     if user_exists == username:
+        #         print("")
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__mailin__":
+    main()
