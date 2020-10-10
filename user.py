@@ -29,4 +29,28 @@ class User:
     def find_by_account_name(cls,account_name):
         """ 
         This method returns the user that matches the account name
+
+        Args:
+             account_name:value of the 
+             acount_name to search for
+        Returns:
+             user that matches the acount_name
         """
+
+        for user in cls.user_list:
+            if user.account_name == account_name:
+                return user
+
+
+    @classmethod
+    def user_exists(cls,login_username):
+        """ 
+        method that checks if the user exists from the list(user)
+        Args:
+            login_username:login_username to search if it exists
+        Returns:True or false depending if the user exists in the list
+        """
+        for user in cls.user_list:
+            if user.login_username == login_username:
+                return True
+            return False
