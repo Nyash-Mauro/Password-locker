@@ -22,3 +22,10 @@ def del_user(user):
     function to delete the user
     """
     user.delete_user()
+
+
+def find_user(user):
+    """
+    function to find a user by username
+    """
+    return User.find_by_account_name(account)
