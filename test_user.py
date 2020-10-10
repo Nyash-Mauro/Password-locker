@@ -16,4 +16,10 @@ class TestUser(unittest.TestCase):
 
         self.new_user = User("twitter","Harnikovice","nyash254") #create a new user
 
-    def
+    def tearDown(self):
+        """
+        teardow method that cleans up after each test case has run
+        """
+        User.user_list = []
+
+    def test_init(self):
