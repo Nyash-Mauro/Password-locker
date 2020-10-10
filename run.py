@@ -66,6 +66,20 @@ def main():
         if short_code == "ex":
             break
 
+        # create an account print
+        elif short_code == "ca":
+            print("-" * 60)
+            print("")
+            print("To create a new account:")
+            account = input("Enter your account -").strip()
+            username = input("Enter your username -").strip()
+            password = input("Enter your password -").strip()
+            save_user(create_user(account, username, password))
+            print("")
+            print(
+                f"New account Created for :{account} {username}using passcode:{password}"
+            )
+
 
 # if __name__ == "__main__":
 #     main()
