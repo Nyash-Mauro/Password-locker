@@ -56,3 +56,16 @@ def user_exist(username, password):
 def main():
     print("")
     print("Hello !! Welcome to Password Locker.")
+    while True:
+        print("")
+        print("-" * 60)
+        print(
+            "Use thes codes to navigate:\n ca-Create an Account \n li-Log In \n ex-Exit"
+        )
+        short_code = input("Enter Your Choice:").lower().strip()
+        if short_code == "ex":
+            break
+
+
+# if __name__ == "__main__":
+#     main()
