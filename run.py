@@ -51,3 +51,8 @@ def user_exist(username, password):
     """
     User.user_exists(username)
     return username
+
+
+def main():
+    print("")
+    print("Hello !! Welcome to Password Locker.")
