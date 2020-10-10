@@ -11,5 +11,9 @@ class TestUser(unittest.TestCase):
 
     def setUp(self):
         """ 
-        this method to run bef
+        this method to run before each test cases
         """
+
+        self.new_user = User("twitter","Harnikovice","nyash254") #create a new user
+
+    def
