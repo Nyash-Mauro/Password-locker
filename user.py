@@ -22,7 +22,7 @@ class User:
         """
          method that deletes the saved user
         """
-        User.user_list.delete(self)
+        User.user_list.remove(self)
     
     @classmethod
     def find_by_account_name(cls,account_name):

@@ -61,13 +61,13 @@ class TestUser(unittest.TestCase):
 
     
     def test_find_user_by_account_name(self):
-        """ 
-        testg to check if we can find a user by acount name and display the data
-        """
+        '''
+        test to check if we can find user by account name and display information
+        '''
         self.new_user.save_user()
         test_user = User("twitter","Harnikovice","nyash254")
         test_user.save_user()
-        found_user = User.find_by_acount_name("twitter")
+        found_user = User.find_by_account_name("twitter")
         self.assertEqual(found_user.account_name,test_user.account_name)
 
 
@@ -81,3 +81,14 @@ class TestUser(unittest.TestCase):
 
         user_exists = User.user_exists("Harnikovice")
         self.assertTrue(user_exists)
+
+    def test_display_all_users(self):
+        """
+        method to return a list of all users
+        """
+        self.assertEqual(User.display_users(),User.user_list)
+
+
+
+if __name__=='__main__':
+    unittest.main()
