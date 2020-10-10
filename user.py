@@ -13,3 +13,12 @@ class User:
 
     def save_user(self):
         '''Method that saves user in the user_list'''
+        User.user_list.append(self)
+
+    def delete_user(self):
+        """ method that deletes the saved user """
+        User.user_list.delete(self)
+    
+    @classmethod
+    def find_by_account_name(cls,account_name):
+        
