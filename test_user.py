@@ -69,3 +69,15 @@ class TestUser(unittest.TestCase):
         test_user.save_user()
         found_user = User.find_by_acount_name("twitter")
         self.assertEqual(found_user.account_name,test_user.account_name)
+
+
+    def test_user_exists(self):
+        """
+        to check if we can return a Boolean if we can't find a user
+        """
+        self.new_user.save_user()
+        test_user = User("twitter","Harnikovice","nyash254")
+        test_user.save_user()
+
+        user_exists = User.user_exists("Harnikovice")
+        self.assertTrue(user_exists)
