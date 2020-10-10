@@ -43,3 +43,11 @@ def display_users(account):
     function that returns all the saved users
     """
     return User.display_users()
+
+
+def user_exist(username, password):
+    """
+    function to chneck if the user exists
+    """
+    User.user_exists(username)
+    return username
