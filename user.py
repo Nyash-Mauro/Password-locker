@@ -54,3 +54,10 @@ class User:
             if user.login_username == login_username:
                 return True
             return False
+
+    @classmethod
+    def display_users(cls):
+        """
+         this mwthod returns user list 
+        """
+        return cls.user_list
