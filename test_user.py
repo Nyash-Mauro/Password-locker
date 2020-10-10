@@ -24,10 +24,15 @@ class TestUser(unittest.TestCase):
 
     def test_init(self):
         """
-         test_init test case,to test if the object is initialized well
+         test_init test case,to test if the new user is initialized well
         """
         self.assertEqual(self.new_user.account_name,"twitter")
         self.assertEqual(self.new_user.login_username,"Harnikovice")
         self.assertEqual(self.new_user.user_password,"nyash254")
 
-    
+    def test_save_user(self):
+        """
+        this test if the user is saved into the user list
+        """
+        self.new_user.save_user() #to save new user
+        self.assertEqual(len(User.user_list),1)
