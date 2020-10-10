@@ -58,3 +58,14 @@ class TestUser(unittest.TestCase):
 
         self.new_user.delete_user() #to delete the user credentials
         self.assertEqual(len(User.user_list),1)
+
+    
+    def test_find_user_by_account_name(self):
+        """ 
+        testg to check if we can find a user by acount name and display the data
+        """
+        self.new_user.save_user()
+        test_user = User("twitter","Harnikovice","nyash254")
+        test_user.save_user()
+        found_user = User.find_by_acount_name("twitter")
+        self.assertEqual(found_user.account_name,test_user.account_name)
