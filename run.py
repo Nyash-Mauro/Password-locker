@@ -24,8 +24,15 @@ def del_user(user):
     user.delete_user()
 
 
-def find_user(user):
+def find_user(account):
     """
-    function to find a user by username
+    function that finds a user by username and returns the user credentials
     """
     return User.find_by_account_name(account)
+
+
+def check_existing_user(username):
+    """
+    function to check if the user exists and returns a Boolean
+    """
+    return User.user_
