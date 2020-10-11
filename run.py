@@ -88,7 +88,13 @@ def main():
             password = str(input("Enter your assword"))
             user_exists = (username(str), password)
             if user_exists == username:
+                print(f"Welcome {username} .Choose an option to continue")
                 print("")
+                while True:
+                    print("-" * 60)
+                    print(
+                        "Navigation codes: \n cc-Create Ur Creade \n dc-Display creade \n copy-Copy your password \n ex-exit"
+                    )
 
 
 if __name__ == "__main__":
