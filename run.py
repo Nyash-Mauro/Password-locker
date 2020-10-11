@@ -57,6 +57,7 @@ def main():
     print("")
     print("Hello !! Welcome to Password Locker.")
     while True:
+        global username
         print("")
         print("-" * 60)
         print(
@@ -79,16 +80,16 @@ def main():
             print(
                 f"New account Created for :{account} {username}using passcode:{password}"
             )
-        # elif short_code == "li":
-        #     print("-" * 60)
-        #     print("")
-        #     print("To login,enter your user details :")
-        #     account = input("Enter your acount account -")
-        #     password = str(input("Enter your assword"))
-        #     user_exists = (username(str), password)
-        #     if user_exists == username:
-        #         print("")
+        elif short_code == "li":
+            print("-" * 60)
+            print("")
+            print("To login,enter your user details :")
+            account = input("Enter your acount account -")
+            password = str(input("Enter your assword"))
+            user_exists = (username(str), password)
+            if user_exists == username:
+                print("")
 
 
-if __name__ == "__mailin__":
+if __name__ == "__main__":
     main()
