@@ -58,8 +58,10 @@ def main():
     print("Hello !! Welcome to Password Locker.")
     while True:
         global username
+        global account
+        global password
         print("")
-        print("-" * 60)
+        print("-" * 50)
         print(
             "Use these codes to navigate:\n ca-Create an Account \n li-Log In \n ex-Exit"
         )
@@ -69,7 +71,7 @@ def main():
 
         # create an account print
         elif short_code == "ca":
-            print("-" * 60)
+            print("-" * 50)
             print("")
             print("To create a new account:")
             account = input("Enter your account -").strip()
@@ -81,7 +83,7 @@ def main():
                 f"New account Created for :{account} {username}using passcode:{password}"
             )
         elif short_code == "li":
-            print("-" * 60)
+            print("-" * 50)
             print("")
             print("To login,enter your user details :")
             account = input("Enter your acount account -")
@@ -91,11 +93,34 @@ def main():
                 print(f"Welcome {username} .Choose an option to continue")
                 print("")
                 while True:
-                    print("-" * 60)
+                    print("-" * 50)
                     print(
                         "Navigation codes: \n cc-Create Ur Creade \n dc-Display creade \n copy-Copy your password \n ex-exit"
                     )
+                    psw_choise = input("Enter an option :").lower()
+                    print("-" * 50)
+                    if psw_choise == "ep":
+                        print("")
+                        password = input("Enter your password:")
+                        break
+                    elif psw_choise == "ex":
+                        break
+                    else:
+                        print("Wrong option entered .Please try again")
+                    save_user(create_user(account, username, password))
+                    print("")
+                    print(
+                        f"User created:account name :{account} {username} password {password}"
+                    )
+                    print("")
 
-
-if __name__ == "__main__":
-    main()
+        elif short_code == "dc":
+            print("")
+            if display_users(username):
+                print("Here is a list of your credentials")
+                print("")
+                for user in display_users(account):
+                    print(f"account: {account}-username:{username} password:{password}")
+                    print("")
+                else:
+                    print("")
