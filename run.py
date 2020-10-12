@@ -86,9 +86,9 @@ def main():
             print("-" * 50)
             print("")
             print("To login,enter your user details :")
-            account = input("Enter your acount account -")
-            password = str(input("Enter your assword"))
-            user_exists = (username(str), password)
+            account = input("Enter your account -")
+            password = str(input("Enter your password -"))
+            user_exists = (username, password)
             if user_exists == username:
                 print(f"Welcome {username} .Choose an option to continue")
                 print("")
@@ -124,3 +124,17 @@ def main():
                     print("")
                 else:
                     print("")
+                    print("You dont seem to have anything here yet")
+                    print("")
+
+            else:
+                print("Danger!Wrong option entered.Please try again")
+
+        else:
+            print("-" * 50)
+            print("")
+            print("Wrong option entered")
+
+
+if __name__ == "__main__":
+    main()
