@@ -14,7 +14,7 @@ def main():
         print("=" * 50)
         ''' This is to help user to select what he wants to do
         '''
-        print("\n \nnew--For Creating new User\nLG-- To Login as an existing User\nEX-- To exit \n")
+        print("\n \nnew--For Creating new User\nli-- To Login as an existing User\nEX-- To exit \n")
         print("-" * 50)
         short_code = input().upper()
         print("-" * 50)
@@ -36,14 +36,14 @@ def main():
                 
             else:
                 print("*" * 50)
-                print(f"*Congratulations {created_new_user.upper()}, Your account is ready, select LG to login*")
+                print(f"*Congratulations {created_new_user.upper()}, Your account is ready, select li to login*")
                 print("*" * 50)
                 new_user = User(created_new_user, created_new_password)
                 new_user.save_user()
             '''
             Log into your created account
             '''
-        elif  short_code == 'LG':
+        elif  short_code == 'li':
             print("Welcome to Your Vault: ")
             print("\nEnter your username:")
             entered_username = input()
@@ -57,7 +57,7 @@ def main():
                 print("Please Enter Valid Username and Paswword:")
                 
             else:
-                print("\nSelect code to continue: \n\nTk: For tiktok \nIG: For Instagram \nPW: to view your saved passwords \nDL: to delete saved username and password")
+                print("\nSelect code to continue: \n\nTk: For tiktok \nIG: For Instagram \nPW: to view your saved passwords \ndel: to delete saved username and password")
                 print("\n")
                 short_code = input().upper()
                 print("-" * 50)
@@ -139,7 +139,7 @@ def main():
                     print(f.read())
                     print("\n")
                 
-                if short_code =='DL':
+                if short_code =='del':
                     print("Select account to delete: DT for tiktok and DI for instagram")
                     select = input().upper()
                     '''
