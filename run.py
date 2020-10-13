@@ -54,8 +54,11 @@ def user_exist(username, password):
 
 
 def main():
-    print("")
-    print("Hello !! Welcome to Password Locker.")
+    print("((=========================================================)))")
+    print("((=========================================================)))")
+    print("         Hello !! Welcome to Password Locker.")
+    print("         ====================================  ")
+    print("         ====================================  ")
     while True:
         global username
         global account
@@ -70,7 +73,7 @@ def main():
             break
 
         # create an account print
-        elif short_code == "ca":
+        if short_code == "ca":
             print("-" * 50)
             print("")
             print("To create a new account:")
@@ -80,12 +83,13 @@ def main():
             save_user(create_user(account, username, password))
             print("")
             print(
-                f"New account Created for :{account} {username}using passcode:{password}"
+                f"New account Created for :{account} {username}using passcode:{password} select li to log in"
             )
+
         elif short_code == "li":
             print("-" * 50)
             print("")
-            print("To login,enter your user details :")
+            print("Login as a user")
             account = input("Enter your account -")
             password = str(input("Enter your password -"))
             user_exists = (username, password)
