@@ -157,6 +157,6 @@ def main():
         elif short_code == "EX":
             break
         else:
-            print("Enter a valide short code to proceed.")
+            print("Enter a valid short code to proceed.")
 if __name__ =='__main__':
     main()
